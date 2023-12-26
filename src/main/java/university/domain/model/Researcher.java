@@ -1,4 +1,10 @@
 package university.domain.model;
 
-public class Researcher {
+import java.util.Comparator;
+
+public interface Researcher {
+
+    ResearchPaper printPapers(Comparator<ResearchPaper> comparator);
+    Integer getHIndex();
+
 }
