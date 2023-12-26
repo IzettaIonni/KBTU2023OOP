@@ -7,11 +7,12 @@ import lombok.Data;
 import lombok.NonNull;
 import org.apache.commons.lang3.RandomStringUtils;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Data
 @Builder
-public class ResearchPaperId {
+public class ResearchPaperId implements Serializable {
 
     @NonNull
     private final UUID value;

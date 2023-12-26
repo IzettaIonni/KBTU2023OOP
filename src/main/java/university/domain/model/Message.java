@@ -3,10 +3,11 @@ package university.domain.model;
 import lombok.Data;
 import lombok.NonNull;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
-public class Message {
+public class Message implements Serializable {
 
     @NonNull
     private final UserId sender;

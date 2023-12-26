@@ -2,13 +2,16 @@ package university.domain.model;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Getter
 @Setter
 @ToString
 @EqualsAndHashCode
-public class Manager extends Employee{
+@Builder(toBuilder = true)
+
+public class Manager extends Employee implements Serializable {
 
     @NonNull
     ManagerType type;

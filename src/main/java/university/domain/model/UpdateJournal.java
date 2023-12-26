@@ -1,25 +1,19 @@
 package university.domain.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 import org.springframework.lang.Nullable;
 
-import java.io.Serializable;
 import java.util.List;
 
 @Data
-@Builder
-@AllArgsConstructor
-public class Journal implements Serializable {
+@Builder(toBuilder = true)
+public class UpdateJournal {
 
     @NonNull
-    private final JournalId id; //same id's value as in student
-    @NonNull
+    private final JournalId id;
     List<Mark> currentMarks;
-    @Nullable
     private Transcript transcript;
-
 
 }

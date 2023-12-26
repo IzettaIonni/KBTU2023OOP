@@ -12,9 +12,9 @@ public interface NewsService {
     News createNews(CreateNews request);
     News updateNews(UpdateNews request);
     void deleteNews(NewsId newsId);
-    Comment getComments(NewsId newsId);
+    List<Comment> getComments(NewsId newsId);
     Comment addComment(NewsId newsId, CreateComment request);
-    void addLikes(CommentId commentId, Integer likes);
+    void addLikes(NewsId newsId, CommentId commentId, Integer likes);
     void deleteComment(NewsId newsid, CommentId commentId);
 
 }

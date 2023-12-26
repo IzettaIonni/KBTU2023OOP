@@ -10,6 +10,5 @@ public interface CourseService {
     Course createCourse(CreateCourse request);
     Course updateCourse(UpdateCourse request);
     void deleteCourse(CourseId id);
-    Course addStudents(List<Student> students);
 
 }

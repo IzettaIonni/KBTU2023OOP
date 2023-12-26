@@ -11,17 +11,17 @@ import java.io.Serializable;
 
 @Data
 @Builder
-public class CourseId  implements Serializable {
+public class JournalId implements Serializable {
 
     @NonNull
     private final String value;
 
     @JsonCreator
-    public static CourseId of(@NonNull String value) {
-        return CourseId.builder().value(value).build();
+    public static JournalId of(@NonNull String value) {
+        return JournalId.builder().value(value).build();
     }
-    public static CourseId randomId() {
-        return of(RandomStringUtils.randomAlphanumeric(6));
+    public static JournalId randomId() {
+        return of(RandomStringUtils.randomAlphanumeric(9));
     }
 
     @JsonValue

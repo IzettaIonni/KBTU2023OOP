@@ -4,9 +4,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 
+import java.io.Serializable;
+
 @Data
 @Builder
-public class Comment implements Cloneable{
+public class Comment implements Cloneable, Serializable {
 
     @NonNull
     private final CommentId id;

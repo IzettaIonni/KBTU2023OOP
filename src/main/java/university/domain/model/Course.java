@@ -6,12 +6,13 @@ import lombok.Data;
 import lombok.NonNull;
 import org.springframework.lang.Nullable;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
 @Builder
-public class Course {
+public class Course  implements Serializable {
 
     @NonNull
     private final CourseId id;

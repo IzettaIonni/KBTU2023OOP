@@ -7,9 +7,11 @@ import lombok.Data;
 import lombok.NonNull;
 import org.apache.commons.lang3.RandomStringUtils;
 
+import java.io.Serializable;
+
 @Builder
 @Data
-public class UserId {
+public class UserId implements Serializable {
 
     @NonNull
     private final String value;

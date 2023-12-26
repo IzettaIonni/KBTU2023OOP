@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NonNull;
 import org.springframework.lang.Nullable;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.UUID;
 
 @Builder
 @Data
-public class News implements Cloneable{
+public class News implements Cloneable, Serializable {
 
     @NonNull
     private final NewsId id;

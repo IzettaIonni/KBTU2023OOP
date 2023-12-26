@@ -6,11 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Data
 @Builder
-public class NewsId {
+public class NewsId implements Serializable {
 
     @NonNull
     private final UUID value;
